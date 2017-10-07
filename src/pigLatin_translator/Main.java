@@ -36,9 +36,6 @@ public class Main {
 			isActive = false;
 			return "Goodbye.";
 		}
-		else if (text.isEmpty()) {
-			return "Please enter a ";
-		}
 		
 		String[] words = text.split(" ");
 
