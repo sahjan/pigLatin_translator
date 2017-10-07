@@ -27,7 +27,6 @@ public class Main {
 			Scanner scanner = new Scanner(System.in);
 			String input = scanner.nextLine();
 			System.out.println(translate(input));
-			
 		}	
 	}
 	
@@ -54,7 +53,6 @@ public class Main {
 					noFirstLetter = noFirstLetter.substring(0, 1).toUpperCase() + noFirstLetter.substring(1);
 				}
 				if (word.matches(".*\\p{Punct}+")) {
-					//String[] wordAndPunct = word.split("\\p{Punct}"); //0 = word, 1 = punctuation
 					char punctuationChar = word.charAt(word.length()-1);
 					noFirstLetter = noFirstLetter.substring(0, noFirstLetter.length()-1);
 					String translatedWord = noFirstLetter + "-" + firstLetter + "ay" + punctuationChar;
@@ -64,12 +62,11 @@ public class Main {
 					String translatedWord = noFirstLetter + "-" + firstLetter + "ay";
 					word = translatedWord;
 				}
-
 			}
 			
 			translation = translation + word + " ";
 		}
-		
+	
 		return translation;
 	}
 	
